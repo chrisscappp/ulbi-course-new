@@ -6,7 +6,6 @@ import { Sidebar } from "widgets/SideBar"
 import { Suspense } from "react" // для fallback к i18n
 import "./styles/index.scss"
 
-
 const App = () => {
 
     const { theme } = useTheme()
