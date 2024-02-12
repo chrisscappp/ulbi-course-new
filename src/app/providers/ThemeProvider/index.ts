@@ -3,7 +3,7 @@ import { useTheme } from "./lib/useTheme";
 import { Themes } from "./lib/ThemeContext"; 
 
 export { 
-    ThemeProvider, 
-    Themes,
-    useTheme 
+	ThemeProvider, 
+	Themes,
+	useTheme 
 }

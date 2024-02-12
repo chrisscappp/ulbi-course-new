@@ -1,3 +1,3 @@
 export {
-    NotFoundPage
+	NotFoundPage
 } from "./ui/NotFoundPage"

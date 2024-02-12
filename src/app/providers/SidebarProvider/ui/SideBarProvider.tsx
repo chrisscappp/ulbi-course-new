@@ -3,18 +3,18 @@ import { SideBarContext } from "../lib/SideBarContext"
 
 const SideBarProvider: FC = ({ children }) => {
 	
-    const [collapsed, setCollapsed] = useState(true)
+	const [collapsed, setCollapsed] = useState(true)
 
-    const defaultProps = useMemo(() => ({
-        collapsed: collapsed,
-        setTheme: setCollapsed
-    }), [collapsed]) // мемоизируем переменную в памяти
+	const defaultProps = useMemo(() => ({
+		collapsed: collapsed,
+		setTheme: setCollapsed
+	}), [collapsed]) // мемоизируем переменную в памяти
 
-    return (
-        <SideBarContext.Provider value={defaultProps}>
-            {children}
-        </SideBarContext.Provider>
-    )
+	return (
+		<SideBarContext.Provider value={defaultProps}>
+			{children}
+		</SideBarContext.Provider>
+	)
 }
 
 export default SideBarProvider

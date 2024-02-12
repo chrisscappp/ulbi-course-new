@@ -8,11 +8,11 @@ interface PageLoaderProps {
 
 export const PageLoader = ({ className }: PageLoaderProps) => {
 
-    return (
-        <div 
-            className = {classNames(cls.PageLoader, {}, [className])}
-        >
-            <Spinner/>
-        </div>
-    )
+	return (
+		<div 
+			className = {classNames(cls.PageLoader, {}, [className])}
+		>
+			<Spinner/>
+		</div>
+	)
 }

@@ -6,22 +6,22 @@ import buildResolvers from "./buildResolvers"
 import { buildDevServer } from "./buildDevServer";
 
 export function buildWebpackConfig(options: BuildOptions): webpack.Configuration {
-    const { mode, paths, isDev } = options 
+	const { mode, paths, isDev } = options 
 	
-    return {
-        mode: mode,
-        entry: paths.entry, //стартовая точка приложения
-        module: {
+	return {
+		mode: mode,
+		entry: paths.entry, //стартовая точка приложения
+		module: {
     		rules: buildLoaders(options)  // конфигурация лоадеров - обработчиков файлов, выходящих за рамки жс
   		},
   		resolve: buildResolvers(options),
-        output: {
-            filename: "[name].[contenthash].js",
-            path: paths.build,
-            clean: true
-        }, // куда и как делаем сборку приложения
-        plugins: buildPlugins(options), // плагины для работы вебпак
-        devtool: isDev ? "inline-source-map" : undefined,
-        devServer: isDev ? buildDevServer(options) : undefined, // настроили сервер для разработки
-    }
+		output: {
+			filename: "[name].[contenthash].js",
+			path: paths.build,
+			clean: true
+		}, // куда и как делаем сборку приложения
+		plugins: buildPlugins(options), // плагины для работы вебпак
+		devtool: isDev ? "inline-source-map" : undefined,
+		devServer: isDev ? buildDevServer(options) : undefined, // настроили сервер для разработки
+	}
 }

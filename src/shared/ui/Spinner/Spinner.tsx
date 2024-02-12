@@ -7,7 +7,7 @@ interface SpinnerProps {
 
 export const Spinner = ({ className }: SpinnerProps) => {
 
-    return (
-        <span className = {classNames("loader", {}, [className])}></span>
-    )
+	return (
+		<span className = {classNames("loader", {}, [className])}></span>
+	)
 }

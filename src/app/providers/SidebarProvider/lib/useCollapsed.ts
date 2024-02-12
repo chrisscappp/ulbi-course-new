@@ -7,11 +7,11 @@ interface UseCollapsedResult {
 }
 
 export function useCollapsed(): UseCollapsedResult {
-    const { collapsed, setCollapsed } = useContext(SideBarContext)
+	const { collapsed, setCollapsed } = useContext(SideBarContext)
 
-    const toggleCollapsed = () => {
-        setCollapsed(!collapsed)
-    }
+	const toggleCollapsed = () => {
+		setCollapsed(!collapsed)
+	}
 
-    return { toggleCollapsed, collapsed }
+	return { toggleCollapsed, collapsed }
 }

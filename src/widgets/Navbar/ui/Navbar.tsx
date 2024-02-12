@@ -10,29 +10,29 @@ interface NavbarProps {
 
 export const Navbar = ({ className }: NavbarProps) => {
 
-    //const { toggleCollapsed } = useCollapsed()
-    const { t } = useTranslation("navbar")
+	//const { toggleCollapsed } = useCollapsed()
+	const { t } = useTranslation("navbar")
 
-    return (
-        <div className = {classNames(cls.Navbar, {}, [className])}>
-            <div className = {cls.links}>
-                <AppLink 
-                    theme = {AppLinkTheme.PRIMARY} 
-                    to = {"/"} 
-                    className = {cls.mainLink}
-                > 
-                    {t("Главная")}
-                </AppLink>
-                <AppLink 
-                    theme = {AppLinkTheme.PRIMARY} 
-                    // eslint-disable-next-line i18next/no-literal-string
-                    to = {"/about"}
-                > 
-                    {t("О сайте")} 
-                </AppLink>
-            </div>
-        </div>
-    )
+	return (
+		<div className = {classNames(cls.Navbar, {}, [className])}>
+			<div className = {cls.links}>
+				<AppLink 
+					theme = {AppLinkTheme.PRIMARY} 
+					to = {"/"} 
+					className = {cls.mainLink}
+				> 
+					{t("Главная")}
+				</AppLink>
+				<AppLink 
+					theme = {AppLinkTheme.PRIMARY} 
+					// eslint-disable-next-line i18next/no-literal-string
+					to = {"/about"}
+				> 
+					{t("О сайте")} 
+				</AppLink>
+			</div>
+		</div>
+	)
 }
 
 // компоненты не требующие асинхронного чанка экспортируем именованным образом
