@@ -1,8 +1,10 @@
+/* eslint-disable i18next/no-literal-string */
 import { classNames } from "shared/lib/classNames/classNames"
 import { useState } from "react";
 import { ThemeSwitcher } from "widgets/ThemeSwitcher";
 import { useCollapsed } from "app/providers/SidebarProvider/lib/useCollapsed";
 import { LangSwitcher } from "widgets/LangSwitcher"
+import { Button } from "shared/ui/Button/Button";
 import cls from "./SideBar.module.scss"
 
 interface SidebarProps {
@@ -24,10 +26,15 @@ export const Sidebar = ({ className }: SidebarProps) => {
 	return (
 		<div 
 			className = {classNames(cls.Sidebar, {[cls.collapsed]: collapsed}, [className])}
+			data-testid = "sidebar"
 		>
-			<button onClick = {onToggle} style = {{height: "20px", width: "20px"}}>
-                
-			</button>
+			<Button 
+				data-testid = "sidebar-toggle"
+				onClick = {onToggle} 
+				style = {{height: "20px", width: "20px"}}
+			>
+                -
+			</Button>
 			<div
 				className = {classNames(cls.switchers, {}, [])}
 			>
